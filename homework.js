@@ -18,7 +18,7 @@ greeting("Chase")
 function isOdd(number) {
     if (Math.abs(number % 2) === 1) {
      return true }
-    else if (!(Math.abs(number % 2) === 1)) {
+    else {
      return false }
   
 }
@@ -28,7 +28,7 @@ function isOdd(number) {
 function isEven(number) {
     if (number % 2 === 0) {
         return true
-    } else if (!(number % 2 === 0)) {
+    } else {
         return false
     }
 }
@@ -122,21 +122,22 @@ function multigreeting(name,language) {
 
 function gcd(a,b) {
     let d = 0
-    while ((a % 2 === 0) && (b %2 === 0)) {
-        a === a/2
-        b === b/2
-        d === d+1
+    while (isEven(a) && isEven(b)) {
+        a = a / 2
+        b = b / 2
+        d = d + 1
     }
     while (a != b) {
-        if (a % 2 === 0) {
-            return a === a/2
-        } else if (b % 2 === 0) {
-            return b === b/2
+        if (isEven(a)) {
+            a = a / 2
+        } else if (isEven(b)) {
+            b = b / 2
         } else if (a > b) {
-            return a === (a-b)/2
+            a = (a - b) / 2
         } else {
-            return b === (b-a)/2
+            b = (b - a) / 2
         }
-    } let g = a
-    let outpt = g * 2**d
+    } 
+    let g = a
+    return g * 2**d
 }
