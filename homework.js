@@ -78,16 +78,19 @@ function lesser(a,b) {
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
+
 function multigreeting(name,language) {
-    if (language = "en") {
-        return "Hello, " + name + "!"
-    } else if (language = "es") {
+    if (language === "en") {
+        return "Hello, " + name + "!" 
+    } else if (language === "es") {
         return "¡Hola, " + name + "!"
-    } else if (language = "fr") {
+    } else if (language === "fr") {
         return "Bonjour, " + name + "!"
-    } else if (language = "eo") {
+    } else if (language === "eo") {
         return "Saluton, " + name + "!"
-    } 
+    } else {
+        return
+    }
 }
 
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
@@ -116,3 +119,24 @@ function multigreeting(name,language) {
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
+function gcd(a,b) {
+    let d = 0
+    while ((a % 2 === 0) && (b %2 === 0)) {
+        a === a/2
+        b === b/2
+        d === d+1
+    }
+    while (a != b) {
+        if (a % 2 === 0) {
+            return a === a/2
+        } else if (b % 2 === 0) {
+            return b === b/2
+        } else if (a > b) {
+            return a === (a-b)/2
+        } else {
+            return b === (b-a)/2
+        }
+    } let g = a
+    let outpt = g * 2**d
+}
